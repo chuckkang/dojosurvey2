@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <p>Name: {{name}}</p>
+        <p>Location: {{location}}</p>
+        <p>Language: {{language}}</p>
+        <p>Language: {{comments}}</p>
+        <p>
+            <form method="GET" action="/">
+                <a href="/">back</a>
+            <input type="button" value="Go Back">
+            </form>
+        </p>
+    </div>
+</body>
+
+</html>

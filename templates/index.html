@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form method="POST" action="/submitform">
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <p>Your Name: <input type="text" name="name"><Br></p>
+        <p>Location: <select name="location">
+            <option value=""> Please select a City</option>
+                    <option value="San Jose"> San Jose </option>
+                    <option value="San Francisco">asdf San Francisco </option>
+                    <option value="Chicago"> Chicago</option>
+                 </select><Br></p>
+        <p>Language: <select name="language">
+            <option value=""> Please select a Language</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                 </select><Br></p>
+        <p> Comment <textarea rows="4" cols="30" name="comments"></textarea></p>
+        <input type="submit" name="submit" value="continue">
+        </form>
+    </div>
+</body>
+
+</html>
