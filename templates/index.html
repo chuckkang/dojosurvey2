@@ -18,11 +18,11 @@
         {% endfor %}
         {% endif %}
         {% endwith %}
-        <p>Your Name: <input type="text" name="name"><Br></p>
+        <p>Your Name: <input type="text" name="name" value="{{ request.form['name'] }}"><Br></p>
         <p>Location: <select name="location">
-            <option value=""> Please select a City</option>
+                    <option value=""> Please select a City</option>
                     <option value="San Jose"> San Jose </option>
-                    <option value="San Francisco">asdf San Francisco </option>
+                    <option value="San Francisco">San Francisco </option>
                     <option value="Chicago"> Chicago</option>
                  </select><Br></p>
         <p>Language: <select name="language">
@@ -31,7 +31,7 @@
                     <option value="C#">C#</option>
                     <option value="Java">Java</option>
                  </select><Br></p>
-        <p> Comment <textarea rows="4" cols="30" name="comments"></textarea></p>
+        <p> Comment <textarea rows="4" cols="30" name="comments" value="{{ request.form['comments'] }}"></textarea></p>
         <input type="submit" name="submit" value="continue">
         </form>
     </div>

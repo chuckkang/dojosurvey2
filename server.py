@@ -15,6 +15,7 @@ def submitform():
     location = request.form["location"].strip()
     language = request.form["language"].strip()
     comments = request.form["comments"].strip()
+
     isValid = False
     # check for name
     if len(name) < 1 :
@@ -36,7 +37,7 @@ def submitform():
     if isValid == True:
         return render_template("results.html", name=name, location=location, language=language, comments=comments)
     else:
-        return redirect ("/")
+        return redirect ("")
     # print name, location, language, comments
     # return render_template("results.html")
 
